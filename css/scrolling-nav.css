@@ -1,6 +1,8 @@
 
 body{
-  font-size: 14px;
+  font-size:13px;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .overalyy{
   margin: 0;
@@ -106,8 +108,19 @@ nav .navbar-nav li a{
   }
 /* below size */
 @media(max-width: 992px){
+  h1{
+    font-size: 10px;
+  }
+#home h1{
+    font-size: 15px;
+    z-index: -99;
+    font-family: 'Quicksand', sans-serif;
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  
+  }
   .slider {
-    width: 100%;
+    /* width: 80%; */
     margin: 100px auto;
 }
 .center img{
@@ -202,6 +215,16 @@ font-weight: bold;
 .service_item_description p{
  
   padding: 15px;
+}
+
+.service_item{
+  background-color: #ddd;
+  height: 50%;
+  width: 50%;
+  padding: 25%;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 }
@@ -340,6 +363,7 @@ padding: 5px;
   margin: 1em 0;
   list-style: none;
   background-color: #ddd;
+  border: 1px solid #b3b3b3;
  
   cursor: pointer;;
 }
@@ -357,6 +381,9 @@ padding: 5px;
 }
 #products{
   padding-bottom: 50px;
+  font-size:13px;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 .products h2{
@@ -380,7 +407,7 @@ padding: 5px;
 .service_item{
   background-color: #ddd;
   height: 50%;
-  width: 100%;
+  width: 80%;
   padding: 25%;
   cursor: pointer;
   border-radius: 50%;
@@ -431,6 +458,7 @@ width: 250px;
 /* contact us */
 #contact{
   padding: 20px;
+  z-index: 100;
 }
 .contact_form{
   background-color: #ddd;
@@ -570,7 +598,7 @@ html, body {
 
 .slick-slide {
   transition: all ease-in-out .3s;
-  opacity: .2;
+  opacity: .1;
 }
 
 .slick-active {
@@ -582,13 +610,14 @@ html, body {
 }
 
 .more{
-  background-image: url('/images/slider_down.PNG');
+ background-image: url(../images/backgrounds/slider.PNG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
  
 }
+
 .text-center{
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
@@ -668,4 +697,36 @@ animation-duration: 5s;
   line-height: 50px;
   background-color: white;
   border-radius: 50%;
+ 
+ }
+ .iconss:hover{
+
+transition: all 1s ease-in-out;
+transform: rotate(360deg);
+}
+
+
+
+#next{
+  display: none;
+}
+.added{
+  display: none;
+}
+.rows{
+  padding: 15px;
+  width: 100%;
+  float: right;
+}
+.paging button{
+  outline: none;
+  margin: 15px;
+}
+.added2{
+  display: none;
+}
+
+.about_me{
+  text-align: center;
+  
 }
