@@ -1,5 +1,5 @@
 
-body{
+zbody{
   font-size:13px;
   letter-spacing: 2px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -108,6 +108,18 @@ nav .navbar-nav li a{
   }
 /* below size */
 @media(max-width: 992px){
+  .modal_content{
+    position: relative;
+    /* display: none; */
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    margin: auto;
+    border: 0px;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
   h1{
     font-size: 10px;
   }
@@ -260,7 +272,7 @@ font-weight: bold;
 /* for devices above the size */
 @media (min-width: 992px) {
 
-  
+ 
 section img{
     width: 100%;
     max-width: 100%;
@@ -586,14 +598,24 @@ html, body {
 .slider {
     /* width: 50%; */
     margin: 100px auto;
+    text-align: center;
 }
-
+.slider div{
+  /* text-align: center; */
+}
+button.slick-prev.slick-arrow {
+  margin-left: 50px;
+}
+button.slick-next.slick-arrow {
+  margin-right: 50px;
+}
 .slick-slide {
   margin: 0px 20px;
 }
 
 .slick-slide img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
 }
 
 .slick-prev:before,
@@ -735,4 +757,82 @@ transform: rotate(360deg);
 .about_me{
   text-align: center;
   
+}
+.modal{
+  /* height: 80%;
+  width: 80%; */
+  display: none;
+  z-index: 100;
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal_content{
+  
+  position: relative;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  margin: auto;
+  border: 0px;
+  width: 80%;
+  padding: 0;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal_header{
+  padding: 2px 16px;
+  background-color: #e60012;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+.modal_content img{
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes animatetop{
+  form{
+    top:-300px;
+    opacity: 0;
+  }
+  to{
+    top:-300px;
+    opacity: 1;
+  }
+}
+@keyframes animatetop{
+  from{
+    top:-300px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close{
+
+color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 35px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  z-index: 100;
+
+}
+.close:hover{
+  background-color: #0054a7;
+  color: white;
+  transition: all .5s ease-in-out;
 }

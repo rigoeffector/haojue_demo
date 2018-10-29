@@ -272,6 +272,17 @@ function active8(){
 
 
 // onclick to view image content model
+const MyImg=()=>{
+  var modal = document.getElementById('myModal');
+  modal.style.display="block";
+  var closing = document.getElementById('closed');
+    closing.onclick = ()=>{
+    modal.style.display="none";
+    window.onclick =()=>{
+      if(event.target ==  modal){
+        modal.style.display = "none;"
+      }
+    }
 
-
-
+  }
+}
